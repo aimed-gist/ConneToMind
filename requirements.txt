@@ -1,0 +1,20 @@
+pip install nibabel wandb
+pip install kornia
+
+pip install transformers==4.34.1
+pip uninstall -y tokenizers
+pip install tokenizers==0.14.1
+pip uninstall -y spacy thinc confection
+pip install pydantic==2.5.3
+
+pip install git+https://github.com/mlfoundations/open_clip.git
+pip install git+https://github.com/openai/CLIP.git
+
+pip install git+https://github.com/lucidrains/dalle2-pytorch.git
+pip install scikit-image==0.21.0
+
+# pip install diffusers==0.14.0
+# pip install diffusers==0.25.0
+
+pip uninstall huggingface_hub -y
+pip install huggingface_hub==0.21.4
