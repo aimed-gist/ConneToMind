@@ -16,7 +16,7 @@ from torchvision import transforms
 from PIL import Image
 import nibabel as nib
 
-import utils
+import utils.utils as utils
     
 class hug_TrainDataset(Dataset): # ses단위로 실행
     def __init__(self, fmri_path, image_path, transform):

@@ -10,15 +10,15 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 from torchvision.utils import save_image
 import wandb
 
-from args import parse_args
+from utils.args import parse_args
 from data import get_dataloader, sub1_train_dataset, sub1_train_dataset_hug, sub1_train_dataset_FuncSpatial
-from mindeye1 import get_model_highlevel, get_model_lowlevel, get_model_highlevel_FuncSpatial
-from optimizers import get_optimizer_highlevel, get_optimizer_lowlevel
-from schedulers import get_scheduler
-from metrics import get_metric
-from trainer import train, inference, evaluate, retrieval_evaluate
-from all_trainer import high_train_inference_evaluate, low_train_inference_evaluate
-from utils import seed_everything, get_unique_path, save_gt_vs_recon_images
+from models.mindeye1 import get_model_highlevel, get_model_lowlevel, get_model_highlevel_FuncSpatial
+from trainers.optimizers import get_optimizer_highlevel, get_optimizer_lowlevel
+from trainers.schedulers import get_scheduler
+from trainers.metrics import get_metric
+from trainers.trainer import train, inference, evaluate, retrieval_evaluate
+from trainers.all_trainer import high_train_inference_evaluate, low_train_inference_evaluate
+from utils.utils import seed_everything, get_unique_path, save_gt_vs_recon_images
 
 
 def main_high_all():
